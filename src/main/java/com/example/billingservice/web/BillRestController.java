@@ -7,6 +7,7 @@ import com.example.billingservice.entities.ProductItem;
 import com.example.billingservice.reposetories.BillRepo;
 import com.example.billingservice.reposetories.ProductRepo;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,6 +16,7 @@ import java.util.Collection;
 
 @RestController
 @AllArgsConstructor
+@NoArgsConstructor
 public class BillRestController {
     private BillRepo billRepo;
     private ProductRepo productRepo;
