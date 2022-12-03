@@ -23,9 +23,9 @@ public class BillRestController {
     private CustomerServiceClient customerServiceClient;
     private InventoryServiceClient inventoryServiceClient;
 
-    @GetMapping("/bills/full/{id}")
-    Bill getBill(@PathVariable(name = "id") Long id){
-        Bill bill=billRepo.findById(id).orElseThrow(()->{
+    /*@GetMapping("/bills/{BillId}")
+    Bill getBill(@PathVariable(name = "BillId") Long id) throws Exception {
+        /*Bill bill=billRepo.findById(id).orElseThrow(()->{
             return new RuntimeException("bill not found !!!");
         });
         bill.setCustomer(customerServiceClient.findCustomerById(bill.getCustomerId()));
@@ -34,5 +34,9 @@ public class BillRestController {
             System.out.println(data.getProduct().getName());
         });
         return bill;
-    }
+        Bill bill=billRepo.findById(id).orElse(null);
+        if(bill==null)
+            throw new Exception("bill not found");
+        return null;
+    }*/
 }
