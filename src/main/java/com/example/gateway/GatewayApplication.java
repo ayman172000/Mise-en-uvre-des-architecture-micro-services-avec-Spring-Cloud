@@ -19,7 +19,7 @@ public class GatewayApplication {
 
     //@Bean
     //configuration static
-    RouteLocator gatewayRoutes(RouteLocatorBuilder builder)
+    /*RouteLocator gatewayRoutes(RouteLocatorBuilder builder)
     {
         /*return builder.routes()
                 .route(r->r.path("/customers/**")
@@ -27,13 +27,16 @@ public class GatewayApplication {
                 .route(r->r.path("/products/**")
                         .uri("http://localhost:8082/"))
                 .build();*/
-        return builder.routes()
+        /*return builder.routes()
                 .route(r->r.path("/customers/**")
                         .uri("lb://CUSTOMER-SERVICE"))
                 .route(r->r.path("/products/**")
                         .uri("lb://INVENTORY-SERVICE"))
-                .build();
-    }
+                .route((r->r.path("/bills/**")
+                        .uri("lb://billing-service")))
+                .build();*/
+    //}
+
 
 
     //configuration dynamic
