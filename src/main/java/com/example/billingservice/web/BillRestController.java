@@ -22,10 +22,10 @@ public class BillRestController {
     private ProductRepo productRepo;
     private CustomerServiceClient customerServiceClient;
     private InventoryServiceClient inventoryServiceClient;
-
-    /*@GetMapping("/bills/{BillId}")
+/*
+    @GetMapping("/bills/{BillId}")
     Bill getBill(@PathVariable(name = "BillId") Long id) throws Exception {
-        /*Bill bill=billRepo.findById(id).orElseThrow(()->{
+        Bill bill=billRepo.findById(id).orElseThrow(()->{
             return new RuntimeException("bill not found !!!");
         });
         bill.setCustomer(customerServiceClient.findCustomerById(bill.getCustomerId()));

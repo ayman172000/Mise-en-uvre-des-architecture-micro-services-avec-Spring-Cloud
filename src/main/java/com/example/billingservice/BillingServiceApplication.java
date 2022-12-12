@@ -28,7 +28,7 @@ public class BillingServiceApplication {
         SpringApplication.run(BillingServiceApplication.class, args);
     }
 
-    @Bean
+    //@Bean
     CommandLineRunner start(BillRepo billRepo, ProductRepo productRepo,
                             CustomerServiceClient customerServiceClient,
                             InventoryServiceClient inventoryServiceClient)
@@ -50,7 +50,7 @@ public class BillingServiceApplication {
                 item.setBill(bill);
                 System.out.println(data);
                 ProductItem save = productRepo.save(item);
-                System.out.println("sacedProduct:"+save);
+                System.out.println("savedProduct:"+save);
             });
         };
     }
